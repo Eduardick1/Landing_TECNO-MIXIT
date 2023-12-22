@@ -1,0 +1,74 @@
+.card {
+	transition-delay: 200ms !important;
+	transition: transform 700ms ease-in;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;	
+}
+.back {
+	transform: rotateX(180deg);
+}
+
+.front, .back {
+	overflow: hidden;
+	backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;	
+}
+.pinkBg {
+	transition: transform 400ms linear;
+}
+.container-card:hover > .card > .front > .pinkBg {
+	transform: scale(10000%);	
+}
+
+.container-card:hover > .card > .front {
+	transition: background-color linear;
+	transition-delay: 1200ms;	
+	background-color: blueviolet;
+}
+	.container-card:hover > .card {
+	transform: rotateX(180deg);	
+}
+
+@media (min-width: 640px) {
+	#wrapper__scrollbar svg {
+		display: none;}}
+
+#wrapper__scrollbar svg {
+	z-index: 100;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	position: absolute;
+	background: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+#wrapper__scrollbar svg:first-child {
+	left: -10px;
+	
+}
+#wrapper__scrollbar svg:last-child {
+	right: -10px;
+}
+
+
+
+#first__scrollbar::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 20px;
+}
+
+
+#first__scrollbar::-webkit-scrollbar {
+	opacity: 0;
+	height: 5px;
+	
+}
